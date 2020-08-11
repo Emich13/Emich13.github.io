@@ -1,0 +1,154 @@
+//Empieza seccion introducción
+
+.introduccion {
+    h1 {
+        @extend %h1;
+        text-align: center;
+        margin-bottom: 27px;
+        .salto,
+        .salto2 {
+            display: block;
+        }
+        #gifos {
+            color: #5ed7c6;
+        }
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+
+        #imagen_home {
+            width: 273px;
+            height: 130px;
+        }
+    }
+
+    form {
+        background: #ffffff;
+        border: 1px solid #572ee5;
+        border-radius: 27px;
+        width: 100%;
+        margin: 0px 21px 31px 20px;
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+        align-items: center;
+
+        input {
+            @extend %input;
+            font-size: 16px;
+            color: #6b7989;
+            text-align: left;
+            border: #ffffff;
+            width: auto;
+            margin-left: 54px;
+        }
+
+        #search {
+            margin-right: 20px;
+        }
+    }
+
+    p {
+        @extend %pmontserrat;
+        text-align: center;
+        margin-bottom: 45px;
+        .salto,
+        .salto0 {
+            display: block;
+        }
+    }
+
+    #trending {
+        font-weight: 700;
+    }
+    
+}
+
+#titulo-search{
+    @extend %h2;
+        text-align: center;
+        margin-bottom: 27px;
+}
+
+#gif_gif {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 21px;
+}
+
+#gif_gif > img {
+    width: 156px;
+    height: 120px;
+}
+
+@media screen and (min-width: 768px) {
+    .introduccion {
+        h1 {
+            .salto {
+                display: inline;
+            }
+
+            .salto2 {
+                display: block;
+            }
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            #imagen_home {
+                width: 399px;
+                height: 190px;
+            }
+        }
+
+        #formulario {
+            display: flex;
+
+            #form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 551px;
+                height: 50px;
+
+                .text {
+                    margin-left: 54px;
+                    width: 210px;
+                    height: 22px;
+                }
+
+                div {
+                    padding-right: 20px;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        p {
+            .salto {
+                display: inline;
+            }
+        }
+    }
+}
+
+#gif_gif {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 21px;
+}
+
+#gif_gif > img {
+    width: 260px;
+    height: 200px;
+}
+
+#fav-down-max{
+    display: flex;
+    width: 10px;
+    height: 10px;
+}

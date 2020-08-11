@@ -1,0 +1,115 @@
+//Empieza seccion trending
+
+.trending_gifos {
+    h2 {
+        @extend %h2;
+        padding-top: 46px;
+    }
+
+    background-color: #f3f5f8;
+    text-align: center;
+    p {
+        @extend %proboto;
+        margin-bottom: 32px;
+        .salto {
+            display: block;
+        }
+    }
+
+    #foo {
+        width: 243px;
+        height: 187px;
+    }
+
+    #img_gif {
+        display: flex;
+        padding-bottom: 82px;
+        margin-bottom: 47px;
+
+        img {
+            flex-direction: row;
+            margin-left: 22px;
+            margin-right: 22px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    #cont-trending > img {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .trending_gifos {
+        p .salto {
+            display: inline;
+        }
+
+        #cont-trending {
+            display: flex;
+            justify-content: center;
+
+            #img_gif {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 182px;
+                margin: 0px;
+
+                img:first-child {
+                    width: 357px;
+                    height: 275px;
+                }
+
+               
+            }
+            .hide{
+                display: none;
+            }
+        .fav-down-max:hover{
+            img:nth-child(2) {
+                display: inline-block;
+                width: 25px;
+                position: relative;
+                top: -230px;
+                right: 110px;
+                margin: 0px;
+            }
+
+            img:nth-child(3) {
+                display: block;
+                width: 25px;
+                position: relative;
+                top: -258px;
+                left: 319px;
+                margin: 0px;
+                
+            }
+
+            img:nth-child(4) {
+                display: block;
+                width: 25px;
+                position: relative;
+                top: -283px;
+                left: 348px;
+                margin: 0px;
+            }
+        }    
+            
+
+            #left {
+                display: block;
+                position: relative;
+                left: 0px;
+                top: -90px;
+            }
+
+            #right {
+                display: block;
+                position: relative;
+                right: 0px;
+                top: -90px;
+            }
+        }
+    }
+}

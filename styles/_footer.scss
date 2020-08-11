@@ -1,0 +1,57 @@
+//Empieza footer
+
+footer {
+    @extend %proboto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    #compartir {
+        font-size: 15px;
+    }
+
+    div #facebook {
+        margin-left: 22px;
+    }
+
+    #trademark {
+        font-size: 14px;
+    }
+    text-align: center;
+    height: 196px;
+
+    #redes {
+        a img {
+            margin-right: 19px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 116px;
+        flex-direction: row;
+
+        #redes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                padding-right: 18px;
+                margin: 49.5px auto 51.4px 156px;
+            }
+        }
+
+        #trademark {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 49.5px 158px 56.5px auto;
+        }
+    }
+}

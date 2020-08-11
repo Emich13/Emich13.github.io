@@ -1,0 +1,106 @@
+//Sección crear
+.crear {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .crear {
+        display: flex;
+        flex-direction: column;
+        display: none;
+
+        #crear-principal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            #camara-recuadro {
+                display: flex;
+                align-items: center;
+                position: relative;
+                left: -117px;
+
+                #camara {
+                    #luz {
+                        position: relative;
+                        top: -60px;
+                        left: -5px;
+                        
+                    }
+                }
+
+                #recuadro {
+                    height: 390px;
+                    width: 688px;
+                    border: solid 1px #572ee5;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    h1 {
+                        text-align: center;
+                        color: #572ee5;
+
+                        #gifos {
+                            color: #50e3c2;
+                        }
+                    }
+
+                    p {
+                        text-align: center;
+                    }
+
+                    .salto {
+                        display: block;
+                        text-align: center;
+                    }
+                }
+            }
+
+            #botones-rueda {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                position: relative;
+                left: 82px;
+                .span-botones {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .uno-2-3 {
+                        color: #572ee5;
+                        display: flex;
+                        width: 32px;
+                        height: 32px;
+                        border: solid 1px #572ee5;
+                        border-radius: 20px;
+                        margin-right: 22px;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                img {
+                    position: relative;
+                    left: 336px;
+                }
+            }
+
+            #violeta {
+                display: flex;
+                width: 795.9px;
+                height: 6.9px;
+                border-radius: 20px;
+            }
+
+            .boton {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #572ee5;
+                border-radius: 25px;
+                border-radius: 25px;
+            }
+        }
+    }
+}
