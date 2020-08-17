@@ -1,42 +1,27 @@
 //Declaro variables
 
-var api              = 'https://api.giphy.com/v1/gifs/search?'
+var api = 'https://api.giphy.com/v1/gifs/search?'
 var api_autocomplete = 'https://api.giphy.com/v1/gifs/search/tags?'
-var api_key          = 'api_key=LbAHC6eAkm7KWtrPTyjps8Ul4z9eFqmJ'
-var specific         = '&limit=12&offset=0&rating=g&q='
-var input;
-var tag;
-var li;
-var ul;
+var api_key = 'api_key=LbAHC6eAkm7KWtrPTyjps8Ul4z9eFqmJ'
+var specific = '&limit=12&offset=0&rating=g&q='
+var specific_tag = '&limit=4&offset=0&rating=g&q='
+var tag_container = document.getElementById('tag_container')
 
 // Al hacer click en lupa busca Gif
 function setUp() {
     contenedor = document.getElementById('gif_gif')
     var btn = document.getElementById('search')
-    btn.addEventListener('click', ()=>{
+    btn.addEventListener('click', () => {
         contenedor.innerHTML = '';
         getSearch()
     })
 }
 setUp()
 
-// Al entrar al input me muestra sugerencias
-
-function getSugesttions(){
-    var input = document.getElementById('text')
-    input.addEventListener('input', ()=>{
-        
-        showSugesttions();
-    })
-}
-
-getSugesttions();
-
 // Request a Api y muestro Gifs
 function getSearch() {
-    input = document.getElementById('text').value
+    let input = document.getElementById('text').value
     var url = api + api_key + specific + input
-    
 
     fetch(url)
         .then(response => response.json())
@@ -53,25 +38,40 @@ function getSearch() {
         })
 }
 
+
+
+// Al entrar al input me muestra sugerencias
+    let input = document.getElementById('text')
+    input.addEventListener('input', function() {
+        
+        getTags(this.value);
+    })
+
+
+
 // Request a Api y muestro sugerencias
-function showSugesttions(){
+function getTags(busqueda) {
+
+    var url = api_autocomplete + api_key + specific_tag + busqueda
     
-        input = document.getElementById('text').value
-        var url = api_autocomplete + api_key + specific + input
+    fetch(url)
+        .then(response => response.json())
+        .then(function (info) {
+            showTags(info.data);
+        })
+}
+
+function showTags(arrayTags){
+    console.log(arrayTags)
+     tag_container.innerHTML=''
+    for (let index = 0; index < arrayTags.length; index++) {
+        li = document.createElement('li')
+        li.textContent = arrayTags[index].name
+
+        li.addEventListener('click', function(){
+            text.value = this.textContent
+        })
+        tag_container.append(li)
         
-    
-        fetch(url)
-        
-            .then(response => response.json())
-            .then(function (info) {
-                for (let index = 0; index < info.data.length; index++) {
-                   let tag = info.data[index].name;
-                   let li = document.createElement('li')
-                    li.innerText = tag
-                    console.log(li.innerText)
-                    
-                   //me falta apendear las sugerencias 
-                    
-                }
-            })
-    }
+    } 
+}

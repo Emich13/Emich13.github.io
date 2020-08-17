@@ -342,6 +342,14 @@ header nav .menu ul .hover:active {
   margin-left: 54px;
 }
 
+.introduccion form #tag_container {
+  list-style-type: none;
+  position: relative;
+  right: 306px;
+  top: 65px;
+  display: block;
+}
+
 .introduccion form #search {
   margin-right: 20px;
 }
@@ -567,11 +575,28 @@ header nav .menu ul .hover:active {
   }
 }
 
-.favoritos {
+body.favoritos .introduccion {
   display: none;
 }
 
-.favoritos .contenedor {
+body.favoritos #mis_gifos {
+  display: none;
+}
+
+body.favoritos #favo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body.favoritos #favo .contenedor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -584,7 +609,7 @@ header nav .menu ul .hover:active {
   height: 600px;
 }
 
-.favoritos .contenedor .foto_gif {
+body.favoritos #favo .contenedor .foto_gif {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -598,7 +623,7 @@ header nav .menu ul .hover:active {
   margin-bottom: 10px;
 }
 
-.favoritos .boton {
+body.favoritos #favo .boton {
   border: 1px solid #572ee5;
   border-radius: 25px;
   border-radius: 25px;
@@ -641,11 +666,28 @@ header nav .menu ul .hover:active {
   border-radius: 25px;
 }
 
-.mis_gifos {
+body.mis_gif .introduccion {
   display: none;
 }
 
-.mis_gifos .contenedor {
+body.mis_gif #favo {
+  display: none;
+}
+
+body.mis_gif #mis_gifos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body.mis_gif #mis_gifos .contenedor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -658,7 +700,7 @@ header nav .menu ul .hover:active {
   height: 600px;
 }
 
-.mis_gifos .contenedor .foto_gif {
+body.mis_gif #mis_gifos .contenedor .foto_gif {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -672,7 +714,7 @@ header nav .menu ul .hover:active {
   margin-bottom: 10px;
 }
 
-.mis_gifos .boton {
+body.mis_gif #mis_gifos .boton {
   border: 1px solid #572ee5;
   border-radius: 25px;
   border-radius: 25px;
@@ -898,20 +940,11 @@ footer #redes a img {
   }
 }
 
-/* body {
-    &.dark_body{
-        @extend %fondo;
+body #favo {
+  display: none;
+}
 
-        h1{
-         
-        }
-
-        h2{
-
-        }
-     }
- 
-     
-
-}*/
+body #mis_gifos {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */

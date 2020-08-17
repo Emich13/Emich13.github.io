@@ -1,29 +1,42 @@
 // Sección favoritos
-
-.favoritos {
-    display: none;
-
-    .contenedor {
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        height: 600px;
-
-        .foto_gif {
-            display: flex;
-            justify-content: center;
-            width: calc((100% - 10px) / 2);
-            height: auto;
-            background: blue;
-            border: 1px solid black;
-            margin-bottom: 10px;
+body {
+    &.favoritos {
+        .introduccion {
+            display: none;
         }
-    }
 
-    .boton {
-        border: 1px solid #572ee5;
-        border-radius: 25px;
-        border-radius: 25px;
+        #mis_gifos {
+            display: none;
+        }
+
+        #favo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .contenedor {
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                height: 600px;
+
+                .foto_gif {
+                    display: flex;
+                    justify-content: center;
+                    width: calc((100% - 10px) / 2);
+                    height: auto;
+                    background: blue;
+                    border: 1px solid black;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .boton {
+                border: 1px solid #572ee5;
+                border-radius: 25px;
+                border-radius: 25px;
+            }
+        }
     }
 }

@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gifOS</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap"rel="stylesheet">
 </head>
 
 
@@ -27,9 +25,9 @@
                 <ul>
                     <li class="hover"><a id="nocturno" href="">Modo Nocturno</a></li>
                     <span></span>
-                    <li class="hover"><a href="">Favoritos</a></li>
+                    <li class="hover"><a id="link_favoritos" href="">Favoritos</a></li>
                     <span></span>
-                    <li class="hover"><a href="">Mis GIFOS</a></li>
+                    <li class="hover"><a id="link_misgifos" href="">Mis GIFOS</a></li>
                     <span></span>
                 </ul>
             </div>
@@ -54,7 +52,7 @@
                 <form id="form" action="">
 
                     <input id="text" class="text" onfocus="this.value=''" type="text" placeholder="Busca GIFOS y más">
-
+                    <ul id="tag_container"></ul>
                     <div> <img id="search" src="assets/icon-search.svg" alt=""></div>
 
                 </form>
@@ -76,7 +74,7 @@
         </section>
 
         <!-- Sección favoritos -->
-        <section class="favoritos">
+        <section id="favo"  >
             <img src="assets/icon-favoritos.svg" alt="">
             <h2>Favoritos</h2>
             <div class="contenedor">
@@ -97,9 +95,9 @@
             <div class="boton">Ver Más</div>
         </section>
         <!-- Sección Mis Gifos -->
-        <section class="mis_gifos">
+        <section id="mis_gifos">
             <img src="assets/icon-mis-gifos.svg" alt="">
-            <h2>Favoritos</h2>
+            <h2>MIs Gifos</h2>
             <div class="contenedor">
                 <div class="foto_gif"><a href=""><img src="" alt=""></a>1</div>
                 <div class="foto_gif"><a href=""><img src="" alt=""></a>1</div>
@@ -189,6 +187,8 @@
     <!-- Scripts -->
     <script src="scripts/trending.js"></script>
     <script src="scripts/busqueda.js"></script>
+    <script src="scripts/favoritos.js"></script>
+    <script src="scripts/misgifos.js"></script>
 </body>
 
 </html>
