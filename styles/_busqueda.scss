@@ -27,3 +27,56 @@
         border-radius: 25px;
     }
 }
+
+@media screen and (min-width: 768px) {
+    .introduccion {
+        display: flex;
+        flex-direction: column;
+        #gif_gif {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-bottom: 182px;
+            margin: 0px;
+
+            img:first-child {
+                width: 260px;
+                height: 200px;
+            }
+
+            .hide {
+                display: none;
+            }
+
+            .fav-down-max:hover {
+                img:nth-child(2) {
+                    display: inline-block;
+                    width: 25px;
+                    position: relative;
+                    top: -73px;
+                    right: 85px;
+                    margin: 0px;
+                }
+
+                img:nth-child(3) {
+                    display: block;
+                    width: 25px;
+                    position: relative;
+                    top: -73px;
+                    right: 81px;
+                    margin: 0px;
+                }
+
+                img:nth-child(4) {
+                    display: block;
+                    width: 25px;
+                    position: relative;
+                    top: -73px;
+                    right: 77px;
+                    margin: 0px;
+                }
+            }
+
+        }
+    }
+}

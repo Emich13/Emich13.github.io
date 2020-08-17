@@ -666,6 +666,61 @@ body.favoritos #favo .boton {
   border-radius: 25px;
 }
 
+@media screen and (min-width: 768px) {
+  .introduccion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .introduccion #gif_gif {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 182px;
+    margin: 0px;
+  }
+  .introduccion #gif_gif img:first-child {
+    width: 260px;
+    height: 200px;
+  }
+  .introduccion #gif_gif .hide {
+    display: none;
+  }
+  .introduccion #gif_gif .fav-down-max:hover img:nth-child(2) {
+    display: inline-block;
+    width: 25px;
+    position: relative;
+    top: -73px;
+    right: 85px;
+    margin: 0px;
+  }
+  .introduccion #gif_gif .fav-down-max:hover img:nth-child(3) {
+    display: block;
+    width: 25px;
+    position: relative;
+    top: -73px;
+    right: 81px;
+    margin: 0px;
+  }
+  .introduccion #gif_gif .fav-down-max:hover img:nth-child(4) {
+    display: block;
+    width: 25px;
+    position: relative;
+    top: -73px;
+    right: 77px;
+    margin: 0px;
+  }
+}
+
 body.mis_gif .introduccion {
   display: none;
 }

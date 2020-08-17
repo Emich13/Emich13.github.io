@@ -11,16 +11,13 @@ function getTrendings() {
 
             for (let index = 0; index < info.data.length; index++) {
                 img = info.data[index].images.downsized_large.url;
-               
+
                 imagen = document.createElement('img');
                 imagen.classList.add('trend-gif-img')
                 imagen.setAttribute('src', img);
 
                 icons();
 
-                div = document.createElement('div')
-                div.classList.add('fav-down-max')
-                div.append(imagen, fav, down, max)
                 cont = document.getElementById('img_gif')
                 cont.append(div)
                 /*  cont.append(fav, down, max) */
@@ -40,10 +37,23 @@ function icons() {
     fav.classList.add('hide', 'fav')
     fav.setAttribute('src', fav_img);
 
+    down = document.createElement('img')
+    down.classList.add('hide', 'down')
+    down.setAttribute('src', down_img);
+
+
+    max = document.createElement('img')
+    max.classList.add('hide', 'max')
+    max.setAttribute('src', max_img);
+
+    div = document.createElement('div')
+    div.classList.add('fav-down-max')
+    div.append(imagen, fav, down, max)
+
     var userSelection = document.getElementsByClassName('fav');
     /* console.log("1ro")
     console.log(userSelection) */
-    
+
     for (var i = 0; i < userSelection.length; i++) {
         (function (index) {
             /* console.log("2do")
@@ -53,24 +63,17 @@ function icons() {
             console.log("4to")
             console.log(userSelection)
             console.log("5to")
-            console.log(userSelection[index]) */ 
-            
+            console.log(userSelection[index]) */
+
             userSelection[index].addEventListener("click", function () {
-                 var url_fav = userSelection[index].previousSibling.src;
+                var url_fav = userSelection[index].previousSibling.src;
                 console.log(url_fav)
                 localStorage.setItem('url_fav', url_fav)
             })
         })(i);
     }
 
-    down = document.createElement('img')
-    down.classList.add('hide', 'down')
-    down.setAttribute('src', down_img);
-
-
-    max = document.createElement('img')
-    max.classList.add('hide', 'max')
-    max.setAttribute('src', max_img);
+    
 }
 
 

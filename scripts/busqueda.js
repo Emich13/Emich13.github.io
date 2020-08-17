@@ -30,8 +30,13 @@ function getSearch() {
                 img = info.data[index].images.downsized_large.url;
                 imagen = document.createElement('img');
                 imagen.setAttribute('src', img);
+
+                //icons() viene de trending.js
+                icons();
+
                 cont = document.getElementById('gif_gif')
-                cont.append(imagen)
+                cont.append(div)
+
                 titulo = document.getElementById('titulo-search')
                 titulo.innerText = input
             }
@@ -39,6 +44,9 @@ function getSearch() {
 }
 
 
+
+
+//----------------TAGS-----------------------------------------------------
 
 // Al entrar al input me muestra sugerencias
     let input = document.getElementById('text')
