@@ -3,7 +3,7 @@
 
 function getTrendings() {
     var url = 'https://api.giphy.com/v1/gifs/trending?api_key=LbAHC6eAkm7KWtrPTyjps8Ul4z9eFqmJ&limit=3&rating=g&offset=' + offest;
-
+    var array_fav = []
 
     fetch(url)
         .then(response => response.json())
@@ -16,11 +16,46 @@ function getTrendings() {
                 imagen.classList.add('trend-gif-img')
                 imagen.setAttribute('src', img);
 
-                icons();
+                var fav_img = "assets/icon-fav-active.svg";
+                var down_img = "assets/icon-download.svg";
+                var max_img = "assets/icon-max.svg";
+
+                fav = document.createElement('img')
+                fav.classList.add('hide', 'fav')
+                fav.setAttribute('src', fav_img);
+                fav.id = index
+
+                fav.addEventListener('click', function () {
+                    var userSelection = document.getElementById(index)
+                    fav_url = userSelection.previousSibling.src
+                    array_fav.push(fav_url)
+                    localStorage.setItem("array_fav", JSON.stringify(array_fav))
+
+                    cont_favoritos = document.getElementById('cont-favoritos')
+                    imagen = document.createElement('img');
+                    imagen.classList.add('foto_gif')
+
+                    gif_favo = JSON.parse(localStorage.getItem("array_fav"))
+                    console.log(gif_favo)
+                    imagen.setAttribute('src', gif_favo);
+                    cont_favoritos.append(imagen)
+                })
+
+                down = document.createElement('img')
+                down.classList.add('hide', 'down')
+                down.setAttribute('src', down_img);
+
+                max = document.createElement('img')
+                max.classList.add('hide', 'max')
+                max.setAttribute('src', max_img);
+
+                div = document.createElement('div')
+                div.classList.add('fav-down-max')
+                div.append(imagen, fav, down, max)
 
                 cont = document.getElementById('img_gif')
                 cont.append(div)
-                /*  cont.append(fav, down, max) */
+
 
             }
         })
@@ -28,7 +63,7 @@ function getTrendings() {
 getTrendings();
 
 //Genero iconos dentro de GIF
-function icons() {
+/* function icons() {
     var fav_img = "assets/icon-fav-active.svg";
     var down_img = "assets/icon-download.svg";
     var max_img = "assets/icon-max.svg";
@@ -36,11 +71,11 @@ function icons() {
     fav = document.createElement('img')
     fav.classList.add('hide', 'fav')
     fav.setAttribute('src', fav_img);
+    
 
     down = document.createElement('img')
     down.classList.add('hide', 'down')
     down.setAttribute('src', down_img);
-
 
     max = document.createElement('img')
     max.classList.add('hide', 'max')
@@ -52,20 +87,11 @@ function icons() {
 
     var userSelection = document.getElementsByClassName('fav');
     /* console.log("1ro")
-    console.log(userSelection) */
+    console.log(userSelection) 
 
     for (var i = 0; i < userSelection.length; i++) {
         (function (index) {
-            /* console.log("2do")
-            console.log(i)
-            console.log("3ro")
-            console.log(userSelection.length)
-            console.log("4to")
-            console.log(userSelection)
-            console.log("5to")
-            console.log(userSelection[index]) */
-
-            userSelection[index].addEventListener("click", function () {
+                userSelection[index].addEventListener("click", function () {
                 var url_fav = userSelection[index].previousSibling.src;
                 console.log(url_fav)
                 localStorage.setItem('url_fav', url_fav)
@@ -73,17 +99,15 @@ function icons() {
         })(i);
     }
 
-    
-}
+
+} */
 
 
 
 
 //Guardar gif en sección favoritos-----------------------------
 
-/* function guardarEnLocalStorage(){
-   
-} */
+
 
 
 

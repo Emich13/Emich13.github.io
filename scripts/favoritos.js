@@ -14,6 +14,20 @@ favoritos.addEventListener('click', function (event) {
     }
 })
 
+//Mostrar elementos guardados en el localstorage
+/* function mostrarGifFavoritos(){
+    for (let index = 0; index < fav_url.length; index++) {
+        cont_favoritos = document.getElementById('cont-favoritos')
+        imagen = document.createElement('img');
+        imagen.classList.add('foto_gif')
+        gif_favo = localStorage.getItem("array_fav")
+        console.log(gif_favo)
+        imagen.setAttribute('src',gif_favo);
+        cont_favoritos.append(imagen)
+        
+    }
+    
+} */
 
 
 //Modo nocturno-----------------------------------------------

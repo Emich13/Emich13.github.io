@@ -70,7 +70,6 @@ function getTags(busqueda) {
 }
 
 function showTags(arrayTags){
-    console.log(arrayTags)
      tag_container.innerHTML=''
     for (let index = 0; index < arrayTags.length; index++) {
         li = document.createElement('li')
