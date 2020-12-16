@@ -544,6 +544,7 @@ header nav .menu ul .hover:active {
     top: -230px;
     right: 110px;
     margin: 0px;
+    padding: 0px;
   }
   .trending_gifos #cont-trending .fav-down-max:hover img:nth-child(3) {
     display: block;
@@ -552,6 +553,7 @@ header nav .menu ul .hover:active {
     top: -258px;
     left: 319px;
     margin: 0px;
+    padding: 0px;
   }
   .trending_gifos #cont-trending .fav-down-max:hover img:nth-child(4) {
     display: block;
@@ -560,6 +562,7 @@ header nav .menu ul .hover:active {
     top: -283px;
     left: 348px;
     margin: 0px;
+    padding: 0px;
   }
   .trending_gifos #cont-trending #left {
     display: block;
@@ -780,7 +783,7 @@ body.mis_gif #mis_gifos .boton {
 }
 
 @media screen and (min-width: 768px) {
-  .crear {
+  body.crear {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -788,9 +791,26 @@ body.mis_gif #mis_gifos .boton {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  body.crear .introduccion {
     display: none;
   }
-  .crear #crear-principal {
+  body.crear #mis_gifos {
+    display: none;
+  }
+  body.crear .trending_gifos {
+    display: none;
+  }
+  body.crear #crear {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body.crear #crear #crear-principal {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -802,7 +822,7 @@ body.mis_gif #mis_gifos .boton {
         -ms-flex-align: center;
             align-items: center;
   }
-  .crear #crear-principal #camara-recuadro {
+  body.crear #crear #crear-principal #camara-recuadro {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -812,12 +832,12 @@ body.mis_gif #mis_gifos .boton {
     position: relative;
     left: -117px;
   }
-  .crear #crear-principal #camara-recuadro #camara #luz {
+  body.crear #crear #crear-principal #camara-recuadro #camara #luz {
     position: relative;
     top: -60px;
     left: -5px;
   }
-  .crear #crear-principal #camara-recuadro #recuadro {
+  body.crear #crear #crear-principal #camara-recuadro #recuadro {
     height: 390px;
     width: 688px;
     border: solid 1px #572ee5;
@@ -835,21 +855,21 @@ body.mis_gif #mis_gifos .boton {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .crear #crear-principal #camara-recuadro #recuadro h1 {
+  body.crear #crear #crear-principal #camara-recuadro #recuadro h1 {
     text-align: center;
     color: #572ee5;
   }
-  .crear #crear-principal #camara-recuadro #recuadro h1 #gifos {
+  body.crear #crear #crear-principal #camara-recuadro #recuadro h1 #gifos {
     color: #50e3c2;
   }
-  .crear #crear-principal #camara-recuadro #recuadro p {
+  body.crear #crear #crear-principal #camara-recuadro #recuadro p {
     text-align: center;
   }
-  .crear #crear-principal #camara-recuadro #recuadro .salto {
+  body.crear #crear #crear-principal #camara-recuadro #recuadro .salto {
     display: block;
     text-align: center;
   }
-  .crear #crear-principal #botones-rueda {
+  body.crear #crear #crear-principal #botones-rueda {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -861,7 +881,7 @@ body.mis_gif #mis_gifos .boton {
     position: relative;
     left: 82px;
   }
-  .crear #crear-principal #botones-rueda .span-botones {
+  body.crear #crear #crear-principal #botones-rueda .span-botones {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -872,7 +892,7 @@ body.mis_gif #mis_gifos .boton {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .crear #crear-principal #botones-rueda .span-botones .uno-2-3 {
+  body.crear #crear #crear-principal #botones-rueda .span-botones .uno-2-3 {
     color: #572ee5;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -889,11 +909,11 @@ body.mis_gif #mis_gifos .boton {
         -ms-flex-align: center;
             align-items: center;
   }
-  .crear #crear-principal #botones-rueda img {
+  body.crear #crear #crear-principal #botones-rueda img {
     position: relative;
     left: 336px;
   }
-  .crear #crear-principal #violeta {
+  body.crear #crear #crear-principal #violeta {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -901,7 +921,7 @@ body.mis_gif #mis_gifos .boton {
     height: 6.9px;
     border-radius: 20px;
   }
-  .crear #crear-principal .boton {
+  body.crear #crear #crear-principal .boton {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

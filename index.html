@@ -7,14 +7,15 @@
     <title>gifOS</title>
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap"
+        rel="stylesheet">
 </head>
 
 
 <body id="body">
     <div id="violeta"></div>
     <header class="header">
-        <img src="assets/logo-mobile.svg" alt="logo">
+        <a id="home" href=""><img src="assets/logo-mobile.svg" alt="logo"></a>
         <nav>
             <div class="menu">
                 <input type="checkbox">
@@ -69,29 +70,15 @@
             <!-- Respuesta de busqueda del user -->
             <h2 id="titulo-search"></h2>
             <div id="gif_gif"></div>
-            
+
             <div class="boton">Ver Más</div>
         </section>
 
         <!-- Sección favoritos -->
-        <section id="favo"  >
+        <section id="favo">
             <img src="assets/icon-favoritos.svg" alt="">
             <h2>Favoritos</h2>
-            <div id="cont-favoritos" class="contenedor">
-                <!-- <div class="foto_gif"><a href=""><img src="" alt=""></a>1</div>
-                <div class="foto_gif"><a href=""><img src="" alt=""></a>1</div>
-                <div class="foto_gif"><a href=""><img src="" alt=""></a>1</div>
-                <div class="foto_gif"><a href=""><img src="" alt=""></a>1</div>
-                <div class="foto_gif"><a href=""><img src="" alt=""></a>1</div>
-                <div class="foto_gif"><a href=""><img src="" alt=""></a>1</div>
-                <div class="foto_gif"><a href=""><img src="" alt=""></a>1</div>
-                <div class="foto_gif"><a href=""><img src="" alt=""></a>1</div>
-                <div class="foto_gif"><a href=""><img src="" alt=""></a>1</div>
-                <div class="foto_gif"><a href=""><img src="" alt=""></a>1</div>
-                <div class="foto_gif"><a href=""><img src="" alt=""></a>1</div>
-                <div class="foto_gif"><a href=""><img src="" alt=""></a>1</div> -->
-            </div>
-
+            <div id="cont-favoritos" class="contenedor"></div>
             <div class="boton">Ver Más</div>
         </section>
         <!-- Sección Mis Gifos -->
@@ -120,7 +107,7 @@
                 GIFOS de nuestra comunidad.<span class="salto"></span>
             </p>
             <div id="cont-trending">
-               
+
                 <img id="left" src="assets/button-left.svg" alt="">
                 <div id="img_gif"></div>
                 <img id="right" src="assets/button-right.svg" alt="">
@@ -128,11 +115,10 @@
 
         </section>
         <!-- Sección crear -->
-        <Section class="crear">
+        <Section id="crear" class="crear">
             <div id="crear-principal">
                 <div id="camara-recuadro">
                     <div id="camara">
-
                         <img src="assets/element_cinta1.svg" alt="">
                         <img src="assets/element_cinta2.svg" alt="">
                         <div>
@@ -141,6 +127,7 @@
                         </div>
                     </div>
                     <div id="recuadro">
+                        <video id="video" autoplay>xxx</video>
                         <h1>
                             Aquí podrás<span class="salto"></span>
                             crear tus propios <span id="gifos">GIFOS</span>
@@ -154,18 +141,22 @@
 
                 <div id="botones-rueda">
                     <div class="span-botones">
-                        <span class="uno-2-3">1</span>
-                        <span class="uno-2-3">2</span>
-                        <span class="uno-2-3">3</span>
+                        <span id="uno" class="uno-2-3">1</span>
+                        <span id="dos" class="uno-2-3">2</span>
+                        <span id="tres" class="uno-2-3">3</span>
                     </div>
                     <img src="assets/pelicula.svg" alt="">
                 </div>
 
                 <div id="violeta"></div>
-                <div class="boton">Comenzar</div>
+                <div id="comenzar_crear" class="boton">Comenzar</div>
+                <div id="comenzar_grabar" class="boton">Grabar</div>
+                <div id="finalizar_grabar" class="boton">Finalizar</div>
             </div>
         </Section>
     </main>
+
+    <!-- Footer -->
     <footer>
         <div id="redes">
             <p id="compartir">Compartir en:</p>
@@ -189,6 +180,9 @@
     <script src="scripts/busqueda.js"></script>
     <script src="scripts/favoritos.js"></script>
     <script src="scripts/misgifos.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/crear.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
 </body>
 
 </html>

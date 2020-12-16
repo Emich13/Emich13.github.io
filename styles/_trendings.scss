@@ -60,42 +60,41 @@
                     width: 357px;
                     height: 275px;
                 }
-
-               
             }
-            .hide{
+            .hide {
                 display: none;
             }
-        .fav-down-max:hover{
-            img:nth-child(2) {
-                display: inline-block;
-                width: 25px;
-                position: relative;
-                top: -230px;
-                right: 110px;
-                margin: 0px;
-            }
+            .fav-down-max:hover {
+                img:nth-child(2) {
+                    display: inline-block;
+                    width: 25px;
+                    position: relative;
+                    top: -230px;
+                    right: 110px;
+                    margin: 0px;
+                    padding: 0px;
+                }
 
-            img:nth-child(3) {
-                display: block;
-                width: 25px;
-                position: relative;
-                top: -258px;
-                left: 319px;
-                margin: 0px;
-                
-            }
+                img:nth-child(3) {
+                    display: block;
+                    width: 25px;
+                    position: relative;
+                    top: -258px;
+                    left: 319px;
+                    margin: 0px;
+                    padding: 0px;
+                }
 
-            img:nth-child(4) {
-                display: block;
-                width: 25px;
-                position: relative;
-                top: -283px;
-                left: 348px;
-                margin: 0px;
+                img:nth-child(4) {
+                    display: block;
+                    width: 25px;
+                    position: relative;
+                    top: -283px;
+                    left: 348px;
+                    margin: 0px;
+                    padding: 0px;
+                }
             }
-        }    
-            
 
             #left {
                 display: block;

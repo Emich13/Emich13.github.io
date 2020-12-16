@@ -25,20 +25,15 @@ function getTrendings() {
                 fav.setAttribute('src', fav_img);
                 fav.id = index
 
-                fav.addEventListener('click', function () {
+                fav.addEventListener('click',  () => {
                     var userSelection = document.getElementById(index)
                     fav_url = userSelection.previousSibling.src
+                    console.log(fav_url)
                     array_fav.push(fav_url)
+                    console.log(array_fav)
                     localStorage.setItem("array_fav", JSON.stringify(array_fav))
 
-                    cont_favoritos = document.getElementById('cont-favoritos')
-                    imagen = document.createElement('img');
-                    imagen.classList.add('foto_gif')
-
-                    gif_favo = JSON.parse(localStorage.getItem("array_fav"))
-                    console.log(gif_favo)
-                    imagen.setAttribute('src', gif_favo);
-                    cont_favoritos.append(imagen)
+                   
                 })
 
                 down = document.createElement('img')
@@ -63,7 +58,7 @@ function getTrendings() {
 getTrendings();
 
 //Genero iconos dentro de GIF
-/* function icons() {
+ function icons() {
     var fav_img = "assets/icon-fav-active.svg";
     var down_img = "assets/icon-download.svg";
     var max_img = "assets/icon-max.svg";
@@ -86,7 +81,7 @@ getTrendings();
     div.append(imagen, fav, down, max)
 
     var userSelection = document.getElementsByClassName('fav');
-    /* console.log("1ro")
+     console.log("1ro")
     console.log(userSelection) 
 
     for (var i = 0; i < userSelection.length; i++) {
@@ -100,7 +95,7 @@ getTrendings();
     }
 
 
-} */
+} 
 
 
 
